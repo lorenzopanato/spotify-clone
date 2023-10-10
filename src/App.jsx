@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import GlobalStyles from "./components/GlobalStyles";
-import SideBar from "./components/GlobalStyles/SideBar";
+import SideBar from "./components/SideBar";
+import Header from "./components/Header";
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
 
 
   const MainContainer = styled.main`
-    background: linear-gradient(to top, #141414, #4596d49c);
+    background: linear-gradient(to top, #141414, #3dd2ec9c);
     flex: 1;
     height: 100vh;
     border-radius: 8px;
@@ -31,7 +32,7 @@ function App() {
       <AppContainer>
         <SideBar />
         <MainContainer>
-          <header></header>
+          <Header />
         </MainContainer>
       </AppContainer>
     </StyledBackground>
