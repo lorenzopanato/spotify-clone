@@ -3,6 +3,7 @@ import GlobalStyles from "./components/GlobalStyles";
 import SideBar from "./components/SideBar";
 import Header from "./components/Header";
 import MostPlayedPlaylist from "./components/MostPlayedPlaylist";
+import RecentlyPlayed from "./components/RecentlyPlayed";
 
 function App() {
 
@@ -34,11 +35,37 @@ function App() {
     margin: 28px 0;
   `;
 
+  const SubtitleHeader = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  `;
+
+  const SubTitle = styled.h2`
+    color: #FFF;
+    font-size: 23px;
+    margin: 28px 0;
+  `;
+
+  const ShowAll = styled.p`
+    font-weight: 700;
+    font-size: 14px;
+    color: #aeaeae;
+    cursor: pointer;
+  `;
+
   const PlaylistsContainer = styled.div`
     display: grid;
     gap: 16px;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
+  `;
+
+  const RecentlyPlayedContainer = styled.section`
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 18px;
   `;
 
   return (
@@ -48,6 +75,7 @@ function App() {
         <SideBar />
         <MainContainer>
           <Header />
+
           <Title>Good morning</Title>
           <PlaylistsContainer>
             <MostPlayedPlaylist />
@@ -57,8 +85,19 @@ function App() {
             <MostPlayedPlaylist />
             <MostPlayedPlaylist />
           </PlaylistsContainer>
-          
-          
+
+          <SubtitleHeader>
+            <SubTitle>Recently played</SubTitle>
+            <ShowAll>Show all</ShowAll>
+          </SubtitleHeader>
+
+          <RecentlyPlayedContainer>
+            <RecentlyPlayed />
+            <RecentlyPlayed />
+            <RecentlyPlayed />
+            <RecentlyPlayed />
+          </RecentlyPlayedContainer>
+
         </MainContainer>
       </AppContainer>
     </StyledBackground>

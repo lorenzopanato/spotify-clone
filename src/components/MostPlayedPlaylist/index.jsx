@@ -43,6 +43,11 @@ const PlayButton = styled.button`
     box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.381);
     visibility: hidden;
     cursor: pointer;
+    
+    &:hover { 
+        opacity: 0.8;
+        transition: 0.4s;
+    }
 
     img {
         width: 20px;
