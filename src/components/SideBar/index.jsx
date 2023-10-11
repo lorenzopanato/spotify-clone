@@ -10,6 +10,7 @@ const SideContainer = styled.aside`
     width: 356px;
     height: 100vh;
     font-size: 15px;
+    position: fixed;
 
     header {
       height: 124px;
