@@ -1,15 +1,17 @@
 import styled from "styled-components";
-import { Heart } from "lucide-react";
+import { Heart, MonitorSpeaker, PlaySquare, AlignJustify, Volume2, Maximize2 } from "lucide-react";
+import PlaySection from "./PlaySection";
 
 const FooterContainer = styled.footer`
     display: flex;
     align-items: center;
+    justify-content: space-between;
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     background: #000;
-    padding: 12px;
+    padding: 8px 14px;
 `; 
 
 const LeftSection = styled.div`
@@ -46,12 +48,27 @@ const LeftSection = styled.div`
     }
 `;
 
-const MiddleSection = styled.div`
-
-`;
-
 const RightSection = styled.div`
+    display: flex;
+    gap: 12px;
+    align-items: center;
 
+    .right-icons {
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+            transition: 0.2s;
+        }
+    }
+
+    .volume-bar {
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(to right,  #FFF 80%, #747474 20%);
+        border-radius: 2px;
+        cursor: pointer;
+    }
 `;
 
 const Footer = () => {
@@ -65,8 +82,15 @@ const Footer = () => {
                 </div>
                 <Heart size={'20px'} style={{ color: '#e2e2e2' }} />
             </LeftSection>
-            <MiddleSection></MiddleSection>
-            <RightSection></RightSection>
+            <PlaySection />
+            <RightSection>
+                <PlaySquare className="right-icons" size={'20px'} />
+                <AlignJustify className="right-icons" size={'20px'} />
+                <MonitorSpeaker className="right-icons" size={'20px'} />
+                <Volume2 className="right-icons" size={'20px'} />
+                <div className="volume-bar"></div>
+                <Maximize2 className="right-icons" size={'20px'} />
+            </RightSection>
         </FooterContainer>
     )
 }
