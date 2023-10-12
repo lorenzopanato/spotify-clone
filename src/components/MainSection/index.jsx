@@ -20,9 +20,14 @@ const ShowAll = styled.p`
     cursor: pointer;
 `;
 
-const YourPlaylistsContainer = styled.section`
+const MainSectionContainer = styled.section`
     display: flex;
     gap: 22px;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @media (max-width: 1240px) {
+    }
   `;
 
 const MainSection = ({ title, name, description }) => {
@@ -32,12 +37,12 @@ const MainSection = ({ title, name, description }) => {
                 <SubTitle>{title}</SubTitle>
                 <ShowAll>Show all</ShowAll>
             </SubtitleHeader>
-            <YourPlaylistsContainer>
+            <MainSectionContainer>
                 <MainSectionPlaylist name={name} description={description} />
                 <MainSectionPlaylist name={name} description={description} />
                 <MainSectionPlaylist name={name} description={description} />
                 <MainSectionPlaylist name={name} description={description} />
-            </YourPlaylistsContainer>
+            </MainSectionContainer>
         </section>
     )
 }

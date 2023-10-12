@@ -24,7 +24,6 @@ function App() {
 
   const MainContainer = styled.main`
     background: linear-gradient(to top, #141414, #141414 66%, #41beef9e 100%);
-    
     flex: 1;
     margin-left: 364px;
     box-sizing: border-box;
@@ -44,6 +43,10 @@ function App() {
     gap: 16px;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: auto auto;
+    }
   `;
 
   return (
@@ -53,7 +56,6 @@ function App() {
         <SideBar />
         <MainContainer>
           <Header />
-
           <Title>Good morning</Title>
           <PlaylistsContainer>
             <MostPlayedPlaylist />
@@ -63,7 +65,6 @@ function App() {
             <MostPlayedPlaylist />
             <MostPlayedPlaylist />
           </PlaylistsContainer>
-
           <MainSection title="Your Playlists" name="Playlist Name" description="By User" />
           <MainSection title="Your Shows" name="Show Name" description="Host" />
         </MainContainer>
@@ -71,6 +72,7 @@ function App() {
         <Footer />
       </AppContainer>
     </StyledBackground>
+    
   )
 }
 

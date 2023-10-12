@@ -3,6 +3,8 @@ import {SkipForward, SkipBack} from "lucide-react";
 
 const PlayContainer = styled.section`
     display: flex;
+    max-width: 560px;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     gap: 5px;
@@ -25,7 +27,7 @@ const PlayContainer = styled.section`
     }
 
     .play-bar {
-        width: 440px;
+        width: 100%;
         display: flex;
         align-items: center;
         gap: 10px;

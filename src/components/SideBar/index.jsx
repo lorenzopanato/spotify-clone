@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Home, Search, Library, Plus, ArrowRight, ChevronDown } from 'lucide-react';
 import Topic from "./Topic";
 import Playlist from "./Playlist";
+import { useState } from "react";
 
 const SideContainer = styled.aside`
     display: flex;
@@ -163,7 +164,6 @@ const SideBar = () => {
                 <div className="playlists-container">
                     {playlists.map(playlist => <Playlist playlist={playlist} />)}
                 </div>
-                
             </section>
         </SideContainer>
     )

@@ -42,8 +42,14 @@ const HeaderContainer = styled.header`
             align-items: center;
             gap: 8px;
         }
+
+        .premium-button,
+        .install-button {
+            @media (max-width: 910px) {
+                display: none;
+            }
+        }
     }
-    
 `;
 
 const Header = () => {

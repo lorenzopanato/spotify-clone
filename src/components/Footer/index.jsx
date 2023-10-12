@@ -4,6 +4,7 @@ import PlaySection from "./PlaySection";
 
 const FooterContainer = styled.footer`
     display: flex;
+    gap: 50px;
     align-items: center;
     justify-content: space-between;
     position: fixed;
